@@ -12,11 +12,11 @@ datasource db {
 }
 
 model Pool {
-  id      String  @id @default(cuid())
-  ownerId String?
+  id String @id @default(cuid())
 
   title     String
   code      String   @unique
+  ownerId   String?
   createdAt DateTime @default(now())
 
   participants Participant[]
